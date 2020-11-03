@@ -1,9 +1,9 @@
 .git/
-react/node_modules/
 .eslintrc
 .gitignore
 package.json
 README.md
+react/node_modules/
 react/**/__tests__/**
 react/**/__mocks__/**
 react/testUtils/**
