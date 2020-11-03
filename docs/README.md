@@ -18,7 +18,7 @@ vtex add vtex.on-view@1.x
 
 ### `useOnView`
 
-It will call the `onView` function when the HTML element is inside the viewport. Differs from [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer) in that this hook doesn't use setState, using a callback approach instead, to improve performance by preventing re-rendering.
+The `onView` function is called whenever the HTML element is inside the viewport. It differs from [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer) in that it uses a callback approach instead of using a `setState`, improving performance by preventing unnecessary re-renders.
 
 ```tsx
 import React from 'react'
