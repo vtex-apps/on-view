@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "on-view",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "title": "",
   "description": "",
   "builders": {
@@ -9,7 +9,9 @@
     "docs": "0.x"
   },
   "dependencies": {},
-  "registries": ["smartcheckout"],
+  "registries": [
+    "smartcheckout"
+  ],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
