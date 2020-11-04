@@ -52,12 +52,12 @@ import { useRenderOnView } from 'vtex.on-view'
 function MyComponent() {
   const element = useRef<HTMLDivElement | null>(null)
 
-  const { hasBeenViewed, dummyElement } = useRenderOnView({
+  const { hasBeenViewed, placeholderElement } = useRenderOnView({
     lazyRender: true,
   })
 
   if (!hasBeenViewed) {
-    return dummyElement
+    return placeholderElement
   }
 
   return <div>Hello World</div>
