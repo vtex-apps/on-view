@@ -8,18 +8,18 @@ const useRenderOnView = ({
   offset = 200,
   waitForUserInteraction = true,
 }) => {
-  const dummy = useRef<HTMLDivElement | null>(null)
+  const placeholder = useRef<HTMLDivElement | null>(null)
   const [hasBeenViewed, setHasBeenViewed] = useState(false)
 
   useOnView({
-    ref: dummy,
+    ref: placeholder,
     onView: () => setHasBeenViewed(true),
     once: true,
     initializeOnInteraction: waitForUserInteraction,
     bailOut: !lazyRender,
   })
 
-  const dummyElement = (
+  const placeholderElement = (
     <div
       style={{
         width: '100%',
@@ -28,7 +28,7 @@ const useRenderOnView = ({
       }}
     >
       <div
-        ref={dummy}
+        ref={placeholder}
         style={{
           /** Allows detecting the view a bit earlier, allowing rendering before the user
            * sees the whitespace where the component should be */
@@ -42,7 +42,7 @@ const useRenderOnView = ({
     </div>
   )
 
-  return { hasBeenViewed: hasBeenViewed || !lazyRender, dummyElement }
+  return { hasBeenViewed: hasBeenViewed || !lazyRender, placeholderElement }
 }
 
 export default useRenderOnView
